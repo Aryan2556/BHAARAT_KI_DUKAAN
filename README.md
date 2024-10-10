@@ -9,3 +9,4 @@ Technologies Used
 - Cloudinary: Used for image upload and optimization.
 + Frontend: To be added based on your frontend stack (React, HTML/CSS, Tailwind etc.).
 * Payment Gateway Test : Stripe Payment etc.
+![.......](https://github.com/user-attachments/assets/6e45a004-1c6e-4fbc-93c1-e55d0c658e39)
