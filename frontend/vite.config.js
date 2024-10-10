@@ -25,7 +25,7 @@ export default defineConfig(({ command, mode }) => {
     server: {
       proxy: {
         "/api": {
-          target: "https://dukaan-fsl6.onrender.com",
+          target: "http://localhost:5000",
           changeOrigin: true, // Optional: for virtual hosted sites
           secure: false, // Optional: if you're using self-signed certificates
         },
