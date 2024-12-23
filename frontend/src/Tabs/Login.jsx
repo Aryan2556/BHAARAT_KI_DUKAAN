@@ -81,7 +81,7 @@ const Login = () => {
         </div>
         <p className="mt-8 text-center text-sm text-gray-400">
           Doesn't have an Account ? {" "}
-          <Link to={'/signin'} className='font-medium text-emerald-400 hover:text-emerald-300'>
+          <Link to={'/signup'} className='font-medium text-emerald-400 hover:text-emerald-300'>
                 Register here <ArrowRight className='inline h-4 w-4' />
           </Link>
        </p>
