@@ -7,7 +7,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import axios from '../lib/axios';
 import { useCartStore } from '../stores/useCartStore';
 
-const stripe = loadStripe(import.meta.env.VITE_STRIPE_LOADER);
+const stripe = loadStripe("sk_test_51Q4ilUAlr9LuKwNEaovePXQnKlLxrZIvVxE1SSQkW2PIIgLj3NnlckJwkhjlG7uLd1G6zY0uvMLryJmQEugpcLch00DpLnIHGm");
 
 const Orders = () => {
 
@@ -88,5 +88,6 @@ const Orders = () => {
     </motion.div>
   );
 };
+
 
 export default Orders;
