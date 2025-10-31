@@ -13,11 +13,7 @@ const PurchaseDone = () => {
 	const [futureDate, setFutureDate] = useState(new Date());
 
 	useEffect(() => {
-		confetti({
-			particleCount: 100,
-			spread: window.innerWidth,
-			origin: { y: 0.5 }
-		});
+
 		const handleCheckoutSuccess = async (sessionId) => {
 			try {
 				await axios.post("/payments/checkout-success", {
@@ -51,22 +47,23 @@ const PurchaseDone = () => {
 		}
 	}, [clearCart]);
 
+	useEffect(()=>{
+		confetti({
+			particleCount: 100,
+			spread: window.innerWidth,
+			origin: { y: 0.5 }
+		});
+	},[]);
+
 	if (isProcessing) return "Processing...";
 
 	if (error) return `Error: ${error}`;
-
-	const handleInvoice = async () => {
-
-	}
 
 	return (
 		<div className='h-screen flex items-center justify-center px-4'>
 
 			<div className='max-w-md w-full bg-gray-800 rounded-lg shadow-xl overflow-hidden relative z-10'>
 				<div className='p-6 sm:p-8'>
-					<div title='Receipt download' className='flex justify-end' onClick={() => handleInvoice()}>
-						<FileBarChart className='text-emerald-400 w-6 h-6 mb-4 hover:bg-gray-600 cursor-pointer p-1 rounded-full' />
-					</div>
 					<div className='flex justify-center'>
 						<CheckCircle className='text-emerald-400 w-16 h-16 mb-4' />
 					</div>
@@ -109,5 +106,6 @@ const PurchaseDone = () => {
 		</div>
 	);
 };
+
 
 export default PurchaseDone;
