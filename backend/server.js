@@ -46,12 +46,9 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-app.get("/", (req,res)=>{
-    res.send("Welcome to Bhaarat ki dukaan");
-})
-
 app.listen(PORT, () => {
     console.log("Server is running on " + PORT);
     connectionDB();
 });
+
 
